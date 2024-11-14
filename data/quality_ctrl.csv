@@ -1,31 +1,31 @@
-submission_date,user_id,product_id,product_name,tried_feature
-2024-01-15,U1001,P101,Smart Watch Pro,Yes
-2024-01-15,U1002,P102,Wireless Earbuds,Yes
-2024-01-16,U1003,P101,Smart Watch Pro,No
-2024-01-16,U1004,P103,Fitness Tracker,Yes
-2024-01-17,U1002,P102,Wireless Earbuds,Yes
-2024-01-17,U1005,P103,Fitness Tracker,No
-2024-01-18,U1006,P101,Smart Watch Pro,Yes
-2024-01-18,U1007,P104,Smart Speaker,No
-2024-01-19,U1008,P104,Smart Speaker,Yes
-2024-01-19,U1009,P102,Wireless Earbuds,Yes
-2024-01-20,U1010,P103,Fitness Tracker,Yes
-2024-01-20,U1011,P104,Smart Speaker,No
-2024-01-21,U1012,P101,Smart Watch Pro,Yes
-2024-01-21,U1013,P102,Wireless Earbuds,Yes
-2024-01-22,U1014,P104,Smart Speaker,No
-2024-01-23,U1015,P101,Smart Watch Pro,Yes
-2024-01-23,U1016,P103,Fitness Tracker,No
-2024-01-24,U1017,P102,Wireless Earbuds,Yes
-2024-01-24,U1008,P104,Smart Speaker,Yes
-2024-01-25,U1018,P101,Smart Watch Pro,No
-2024-01-25,U1019,P103,Fitness Tracker,Yes
-2024-01-26,U1020,P102,Wireless Earbuds,Yes
-2024-01-26,U1021,P104,Smart Speaker,No
-2024-01-27,U1022,P101,Smart Watch Pro,Yes
-2024-01-27,U1023,P103,Fitness Tracker,Yes
-2024-01-28,U1024,P102,Wireless Earbuds,Yes
-2024-01-28,U1025,P104,Smart Speaker,Yes
-2024-01-29,U1026,P101,Smart Watch Pro,No
-2024-01-29,U1027,P103,Fitness Tracker,Yes
-2024-01-30,U1028,P104,Smart Speaker,Yes
+submission_date,user_id,product_id,product_name,tried_feature,current_year
+2024-01-15,U1001,P101,Smart Watch Pro,Yes,2024
+2024-01-15,U1002,P102,Wireless Earbuds,Yes,2024
+2024-01-16,U1003,P101,Smart Watch Pro,No,2023
+2024-01-16,U1004,P103,Fitness Tracker,Yes,2024
+2024-01-17,U1002,P102,Wireless Earbuds,Yes,2024
+2024-01-17,U1005,P103,Fitness Tracker,No,2024
+2024-01-18,U1006,P101,Smart Watch Pro,Yes,2023
+2024-01-18,U1007,P104,Smart Speaker,No,2024
+2024-01-19,U1008,P104,Smart Speaker,Yes,2024
+2024-01-19,U1009,P102,Wireless Earbuds,Yes,2024
+2024-01-20,U1010,P103,Fitness Tracker,Yes,2024
+2024-01-20,U1011,P104,Smart Speaker,No,2024
+2024-01-21,U1012,P101,Smart Watch Pro,Yes,2024
+2024-01-21,U1013,P102,Wireless Earbuds,Yes,2024
+2024-01-22,U1014,P104,Smart Speaker,No,2024
+2024-01-23,U1015,P101,Smart Watch Pro,Yes,2024
+2024-01-23,U1016,P103,Fitness Tracker,No,2024
+2024-01-24,U1017,P102,Wireless Earbuds,Yes,2024
+2024-01-24,U1008,P104,Smart Speaker,Yes,2024
+2024-01-25,U1018,P101,Smart Watch Pro,No,2024
+2024-01-25,U1019,P103,Fitness Tracker,Yes,2024
+2024-01-26,U1020,P102,Wireless Earbuds,Yes,2024
+2024-01-26,U1021,P104,Smart Speaker,No,2023
+2024-01-27,U1022,P101,Smart Watch Pro,Yes,2024
+2024-01-27,U1023,P103,Fitness Tracker,Yes,2024
+2024-01-28,U1024,P102,Wireless Earbuds,Yes,2024
+2024-01-28,U1025,P104,Smart Speaker,Yes,2024
+2024-01-29,U1026,P101,Smart Watch Pro,No,2024
+2024-01-29,U1027,P103,Fitness Tracker,Yes,2024
+2024-01-30,U1028,P104,Smart Speaker,Yes,2024
