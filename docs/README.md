@@ -11,6 +11,8 @@ Our application serves two clients: those that produce new products that need ev
      - (3) Integrate feedback and dashboarding for results
 
 3) (3 pt) A **quality control module** which has two possible implementations based on the methods we discussed in class. Embedding test questions means that the quality control algorithms would act on the data as a filter after the data has been collected in a CSV format from the third party survey tools. This is likely the method we will choose since our crowdsourcing audience is already supposed to be qualified/restricted by definition (as customer facing employees, who would know the company and its products). Therefore, we can weed out any employees who seem to be answering insincerely. In summary, the input to this module would be the raw CSV data and the output would be a filtered version in addition to a list of responses that were analyzed to be insincere. We can further enhance our quality control module by utilizing questions that establish a baseline understanding of our users. Questions like what color is an orange, or what's 2+3 allow us to weed out botted users or users which are simply moving through the survey as quickly as possible without regard for correctness.
+   - Input: `product_feedback.csv`
+   - Output: `quality_ctl.csv`
    - Milestones:
      - (1) Implement basic quality control based on majority voting
      - (2) Test further methods of voting such as weighted voting and compare results
