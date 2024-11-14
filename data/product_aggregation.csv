@@ -1,0 +1,5 @@
+product_name,avg_price_rating,review_count,price_rating_std,avg_recommend_likelihood,recommend_likelihood_std,avg_suggested_price,suggested_price_std,avg_ease_of_use,ease_of_use_std,avg_feature_satisfaction,feature_satisfaction_std
+Fitness Tracker,4.6,5,0.548,8.0,0.707,97.99,5.701,4.8,0.447,4.0,0.707
+Smart Speaker,4.25,4,0.5,7.25,0.5,92.49,6.455,4.25,0.5,4.25,0.5
+Smart Watch Pro,4.4,5,0.548,8.0,1.0,263.99,27.019,4.6,0.548,4.4,0.548
+Wireless Earbuds,4.571,7,0.535,8.286,0.756,131.419,7.48,4.714,0.488,4.571,0.535

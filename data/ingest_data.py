@@ -35,6 +35,83 @@ def generate_quality_ctrl_csv(df, headers, filename="quality_ctrl.csv"):
     except Exception as e:
         print(f"Error creating CSV file: {str(e)}")
 
+
+def aggregate_feedback(df, user_filename, product_filename):
+    """
+    Aggregate feedback data into user-level and product-level summaries.
+    
+    Args:
+        df (pandas.DataFrame): Input feedback DataFrame
+        
+    Returns:
+        tuple: (user_metrics_df, product_metrics_df)
+            - user_metrics_df: DataFrame with user-level metrics
+            - product_metrics_df: DataFrame with product-level metrics from verified users
+    """
+    
+    # User-level aggregation
+    user_metrics = df.groupby('user_id').agg({
+        'tried_feature': lambda x: (x == 'Yes').mean(),  # Quality control success rate
+        'price_rating': 'mean',
+        'recommend_likelihood': 'mean',
+        'suggested_price': 'mean',
+        'ease_of_use': 'mean',
+        'feature_satisfaction': 'mean',
+        'product_id': 'count'  # Number of reviews per user
+    }).round(3).reset_index()
+    
+    # Rename columns for clarity
+    user_metrics.columns = [
+        'user_id',
+        'quality_control_rate',
+        'avg_price_rating',
+        'avg_recommend_likelihood',
+        'avg_suggested_price',
+        'avg_ease_of_use',
+        'avg_feature_satisfaction',
+        'total_reviews'
+    ]
+
+    user_filename = "data/" + user_filename
+    try:
+        user_metrics.to_csv(user_filename, index=False)
+        print(f"Successfully created {user_filename}")
+    except Exception as e:
+        print(f"Error creating CSV file: {str(e)}")
+    
+    # Product-level aggregation (filtered for verified users)
+    verified_feedback = df[df['tried_feature'] == 'Yes']
+    
+    product_metrics = verified_feedback.groupby('product_name').agg({
+        'price_rating': ['mean', 'count', 'std'],
+        'recommend_likelihood': ['mean', 'std'],
+        'suggested_price': ['mean', 'std'],
+        'ease_of_use': ['mean', 'std'],
+        'feature_satisfaction': ['mean', 'std']
+    }).round(3).reset_index()
+    
+    # Flatten column names
+    product_metrics.columns = [
+        'product_name',
+        'avg_price_rating', 'review_count', 'price_rating_std',
+        'avg_recommend_likelihood', 'recommend_likelihood_std',
+        'avg_suggested_price', 'suggested_price_std',
+        'avg_ease_of_use', 'ease_of_use_std',
+        'avg_feature_satisfaction', 'feature_satisfaction_std'
+    ]
+
+    product_filename = "data/" + product_filename
+    try:
+        product_metrics.to_csv(product_filename, index=False)
+        print(f"Successfully created {product_filename}")
+    except Exception as e:
+        print(f"Error creating CSV file: {str(e)}")
+
+    # print(user_metrics)
+    # print(product_metrics)
+    
+    # return user_metrics, product_metrics
+
 if __name__ == "__main__":
     headers = [
         'submission_date',
@@ -97,3 +174,5 @@ if __name__ == "__main__":
     ]
 
     generate_quality_ctrl_csv(df, qc_headers)
+    aggregate_feedback(df, "user_aggregation.csv", "product_aggregation.csv")
+    
