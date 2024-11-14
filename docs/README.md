@@ -19,6 +19,9 @@ Our application serves two clients: those that produce new products that need ev
      - (2) Test further methods of voting such as weighted voting and compare results
 
 5) (5 pt) An **aggregation module** will compute relevant statistics specific to the product as well as between products. Some examples would be the most useful product, the product with the highest value (based on price someone would pay), and of course the favorable products that employees put their credits on. This involves some exploratory data analysis and calculations in dataframes. The input would be the filtered CSV data from the quality control module, and the output would be a set of relevant statistics in dataframes or possibly a CSV output.
+    - Input: `product_feedback.csv`
+    - Output: `product_aggregation.csv`, `user_aggregation.csv`
+    - Code: `ingest_data.py`
     - Milestones:
       - (1) Achieve basic analysis of simple statistics as dataframes (e.g. lists based on highest overall rating for each column)
       - (2) Complex data analytics, including developing a weighting for the different columns and nonobvious stastics
